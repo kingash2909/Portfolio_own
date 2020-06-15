@@ -1,0 +1,345 @@
+
+<!doctype html>
+<head>
+  {% load static %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v4.0.1">
+  <title>Ashish Mishra Portfolio</title>
+
+  <link rel = "icon" href =
+          "{% static 'logohead.png' %}"
+        type = "image/x-icon">
+
+</head>
+
+<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+<style>
+
+      .nav-item{
+           text-align: center !important;
+
+      }
+
+
+      .navbar-brand {
+            margin-top : 10px;
+      }
+
+
+      .logo_head {
+            height : 70px;
+            width : 70px;
+            margin :10px;
+            margin-right : 10px;
+            display: block;
+
+      }
+
+      #section_top{
+            background-image: url("{% static 'bg.jpg' %}");
+      }
+
+      .more_but {
+            position : relative;
+
+            width: 150px;
+            padding : 10px;
+            font-size : 15px;
+<!--            color : #15f4ee;-->
+            font-family : poppins;
+            font-weight : 400;
+            border : 5px solid red blue;
+            font-family : poppins;
+            letter-spacing : 5px;
+            border-radius: 100px;
+            transition : 1s;
+      }
+
+      .more_but:hover {
+            box-shadow : 0 1px 35px 0 red inset,
+                         0 1px 20px 0 blue,
+                         0 1px 35px 0 blue inset,
+                         0 1px 25px 0 red;
+      }
+
+
+
+      footer {
+            background-image: url("{% static 'bg.jpg' %}");
+
+      }
+
+
+
+      .backtotop {
+
+            height : 50px;
+            width : 50px;
+      }
+
+
+
+      .textcenter {
+            text-align : center;
+      }
+
+
+
+
+      .Certifications_text {
+            text-decoration : underline ;
+            font-weight : bold;
+            text-align : center;
+      }
+
+
+      .project_text {
+            text-decoration : underline ;
+            font-weight : bold;
+            text-align : center;
+      }
+
+
+      .count_text h1 {
+	        font-size: 50px;
+	        margin: 0;
+	        color:red;
+        }
+      .count_text  {
+            display : block;
+	        text-align : center;
+        }
+      .count_text p {
+            text-align : center;
+            font-weight : bold;
+
+      }
+      .c_text {
+            margin-top : 25px;
+            margin-left: 25px;
+            text-align : center;
+            font-weight : bold;
+      }
+
+      .c_text {
+            font-weight : bold;
+      }
+
+
+
+
+      #blocked {
+            border : solid black;
+      }
+
+
+
+
+      .social_icon {
+
+            height : 40px;
+            width : 40px;
+      }
+
+
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+</style>
+<!-- Custom styles for this template -->
+<link href="album.css" rel="stylesheet">
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="header_id">
+    <a href="#"> <img class="logo_head" src=" {% static 'logohead.png' %}" alt="logo"></a>
+    <a class="navbar-brand" href="#"><h1>Ashish's Portfolio</h1></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto" >
+        <hr>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'Projects' %}" target="_blank"><h4>Project's</h4> </a>
+        </li>
+        <hr>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.linkedin.com/in/ashish-mishra-5787a1146/" target="_blank"><h4>LinkedIn</h4> </a>
+        </li>
+        <hr>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/kingash2909" target="_blank"><h4>Github</h4></a>
+        </li>
+        <hr>
+        <li class="nav-item">
+          <a class="nav-link" href="#" target="_blank"><h4>Resume</h4></a>
+        </li>
+        <hr>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main role="main">
+
+  <section id="section_top" class="jumbotron text-center">
+
+    <div class="container" >
+      
+      <img src="{% static 'header_img.png' %}">
+      <h1>Ashish S. Mishra</h1>
+      <p class="lead text-bold">Python Developer | Database Engineer | System Administrator | Programmer </p>
+      <p>
+        <a href="mailto:i.m.ashishhh@gmail.com" class="btn btn-primary my-2">Email Me</a>
+        <button type="button" class="btn btn-primary my-2" onclick="toggleText()">Contact No.</button>
+        <p id="demo" style="display:none"> Mobile No : +91 73030 19154 </p>
+      </p>
+
+    </div>
+  </section >
+
+  <div class="album py-5 bg-light " >
+    <div class="container">
+
+      <h2 class="Certifications_text  "> Certification </h2><br>
+      <hr>
+      <div class="row">
+      {% for pro in profile %}
+        <div class="col-md-4 span6" style="float:none; margin: 0 auto;">
+          <div class="card mb-4 shadow-sm" >
+            <a href="{{pro.pdf.url}}" target = "_blank">
+            <img  class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{pro.image.url}}" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail" ><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/></img>
+            </a>
+            <div class="card-body">
+              <p id="scroll_down" class="card-text text-center c_text" >{{ pro.summary}}</p>
+
+            </div>
+          </div>
+        </div>
+       {% endfor %}
+      </div>
+<!--      <form action="{% url 'Projects' %}" target="_blank">-->
+<!--      <button class="more_but" style="position: absolute; right: 100px;">MORE...</button>-->
+<!--      </form>-->
+    </div>
+  </div>
+<hr>
+  <div class="album py-5 bg-light " >
+    <div class="container">
+      <h2 class="Certifications_text  "> Projects </h2><br>
+      <hr>
+      <div class="row">
+      {% for pro in profile %}
+        <div class="col-md-4 span6" style="float:none; margin: 0 auto;">
+          <div class="card mb-4 shadow-sm" >
+<!--            <a href="{{pro.pdf.url}}" target = "_blank">-->
+            <img  class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{pro.cert_img.url}}" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail" ><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/></img>
+            </a>
+            <div class="card-body">
+              <p id="scroll_down" class="card-text text-center c_text" >{{ pro.cert_summary}}</p>
+
+            </div>
+          </div>
+        </div>
+       {% endfor %}
+      </div>
+      <form action="{% url 'Projects' %}" target="_blank">
+      <button class="more_but" style="position: absolute; right: 100px;">MORE...</button>
+      </form>
+    </div>
+  </div><hr>
+</main>
+
+<footer class="text-muted">
+<hr>
+  <div class="container">
+    <a href="https://www.facebook.com/rj.ashish.mishra3" target="_blank"> <img class="social_icon " src="{% static 'fb.png' %}"></a>
+    <a href="https://www.instagram.com/" target="_blank"> <img class="social_icon " src="{% static 'insta.png' %}"></a>
+    <a href="https://twitter.com/login" target="_blank"> <img class="social_icon " src="{% static 'twiter.png' %}"></a>
+    <a href="https://wa.me/7303019154" target="_blank"> <img class="social_icon " src="{% static 'watsapp.png' %}"></a>
+
+    <p class="float-right">
+      <a href="#"> <img class="backtotop" src="https://uxwing.com/wp-content/themes/uxwing/download/02-arrow/round-black-top-arrow.png"></a>
+    <hr>
+    <div class="count_text">
+        <p class="c_text">This page was viewed</p>
+        <h1 id="count_no">0</h1>
+         <p>times</p>
+    </div>
+    <hr>
+
+    <h5 class="textcenter">&copy Ashish Mishra All Rights Reserved {% now "Y" %}.</h5>
+    </p>
+<hr>
+  </div>
+
+
+</footer>
+
+<script>
+
+  function toggleText() {
+    var text = document.getElementById("demo");
+    if (text.style.display === "none") {
+      text.style.display = "block";
+    } else {
+      text.style.display = "none";
+    }
+  }
+</script>
+<script>
+        const countEl = document.getElementById('count_no');
+
+        updateVisitCount();
+
+        function updateVisitCount() {
+            fetch('https://api.countapi.xyz/update/sample.com/web?amount=1')
+                .then(res => res.json())
+                .then(res => {
+                    countEl.innerHTML = res.value;
+            })
+        }
+
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

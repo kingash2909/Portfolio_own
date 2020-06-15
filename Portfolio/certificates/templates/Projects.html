@@ -1,0 +1,231 @@
+
+<!doctype html>
+<head>
+  {% load static %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v4.0.1">
+  <title>Ashish Mishra Portfolio</title>
+
+  <link rel = "icon" href =
+          "{% static 'logohead.png' %}"
+        type = "image/x-icon">
+
+</head>
+
+<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+<style>
+
+       .logo_head {
+            height : 70px;
+            width : 70px;
+            margin :10px;
+            margin-right : 10px;
+            display: block;
+
+      }
+
+      .nav-item{
+           text-align: center !important;
+
+      }
+
+
+      .navbar-brand {
+            margin-top : 10px;
+      }
+
+      .cert_2text {
+             display: inline;
+             vertical-align: top;
+             line-height: 1;
+      }
+      .Certifications_text {
+            text-align : center;
+            color: red;
+      }
+
+
+
+
+       .social_icon {
+
+            height : 40px;
+            width : 40px;
+      }
+
+      .project_text {
+            text-decoration : underline ;
+            font-weight : bold;
+            text-align : center;
+      }
+
+      .textcenter {
+            text-align : center;
+      }
+      .g_button{
+            position :relative;
+            display: inline-block;
+            padding : 10px 10px;
+            border-radius:10px;
+            border : 1px solid;
+            color : black;
+            font-weight : bold;
+            text-transform : uppercase;
+            letter-spacing: 4px;
+            text-decoration: none;
+            font-size: 24px;
+            overflow : hidden;
+            transition : 1s;
+      }
+      .g_button:hover{
+            color : #255784;
+            background : #2196f3;
+            box-shadow: 0 0 10px #2196f3,
+                        0 0 40px #2196f3,
+                        0 0 10px #2196f3,
+      }
+
+      .backtotop {
+
+            height : 50px;
+            width : 50px;
+      }
+
+      footer {
+            background-image: url("{% static 'bg.jpg' %}");
+
+      }
+
+
+      ::-web-kit-scrollbar {
+            background: linear-gradient(transparent, #30ff00);
+            border-radius: 6px;
+      }
+
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+</style>
+<!-- Custom styles for this template -->
+<link href="album.css" rel="stylesheet">
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="header_id">
+    <a href="#"> <img class="logo_head" src=" {% static 'logohead.png' %}" alt="logo"></a>
+    <a class="navbar-brand" href="{% url 'home' %}"><h1>Ashish's Portfolio</h1></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto" >
+        <hr>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.linkedin.com/in/ashish-mishra-5787a1146/" target="_blank"><h4>LinkedIn</h4> </a>
+        </li>
+        <hr>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/kingash2909" target="_blank"><h4>Github</h4></a>
+        </li>
+        <hr>
+        <li class="nav-item">
+          <a class="nav-link" href="#" target="_blank"><h4>Resume</h4></a>
+        </li>
+        <hr>
+      </ul>
+    </div>
+  </nav>
+  <div class="album py-5 bg-light contain2" >
+    <div class="container">
+      <h2 class="Certifications_text  "> Detailed Overview Of Projects </h2><br>
+      <hr>
+      <div class="row">
+      {% for pro in certificates %}
+        <div class="col-md-6 span6" style="float:none; margin: 0 auto;">
+          <div class="card mb-4 shadow-sm" style="background: #000000, text-color : white;		">
+<!--            <a href="{{pro.pdf.url}}" target = "_blank">-->
+            <img  class="bd-placeholder-img card-img-top" width="100%" height="325" src="{{pro.cert_image.url}}" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail" ><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/></img>
+            </a>
+            <div class="card-body" >
+              <p id="scroll_down" class="card-text text-center c_text" style="font-weight : bold; font-size : 22px">{{ pro.cert_summary}}</p>
+            </div>
+            <hr>
+            <div class="card-body">
+              <p class="card-text text-center c_text" >{{ pro.cert_detailed}}</p>
+              <hr><h4 style="font-weight : bold; ">* FrontEnd</h4><p class="card-text text-center c_text" >{{ pro.cert_frontend}}</p><hr>
+              <h4 style="font-weight : bold; ">* BackEnd</h4><p class="card-text text-center c_text" >{{ pro.cert_backend}}</p><hr>
+
+               <li class="nav-item" style="list-style: none">
+                  <a class="nav-link g_button" href="https://github.com/kingash2909" target="_blank"><h4>Github</h4></a>
+               </li>
+            </div>
+          </div><hr>
+        </div>
+       {% endfor %}
+      </div>
+</header>
+
+<main role="main">
+
+
+</main>
+
+<footer class="text-muted">
+<hr>
+  <div class="container">
+    <a href="https://www.facebook.com/rj.ashish.mishra3" target="_blank"> <img class="social_icon " src="{% static 'fb.png' %}"></a>
+    <a href="https://www.instagram.com/" target="_blank"> <img class="social_icon " src="{% static 'insta.png' %}"></a>
+    <a href="https://twitter.com/login" target="_blank"> <img class="social_icon " src="{% static 'twiter.png' %}"></a>
+    <a href="https://wa.me/7303019154" target="_blank"> <img class="social_icon " src="{% static 'watsapp.png' %}"></a>
+
+    <p class="float-right">
+      <a href="#"> <img class="backtotop" src="https://uxwing.com/wp-content/themes/uxwing/download/02-arrow/round-black-top-arrow.png"></a>
+    <hr>
+    <h5 class="textcenter">&copy Ashish Mishra All Rights Reserved {% now "Y" %}.</h5>
+    </p>
+<hr>
+  </div>
+</footer>
+
+<script>
+
+  function toggleText() {
+    var text = document.getElementById("demo");
+    if (text.style.display === "none") {
+      text.style.display = "block";
+    } else {
+      text.style.display = "none";
+    }
+  }
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
